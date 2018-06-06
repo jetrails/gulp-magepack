@@ -1,0 +1,48 @@
+{
+	"name": "gulp-magepack",
+	"description": "Automate Magento 1 extension packaging for gulp",
+	"main": "index.js",
+	"version": "1.0.3",
+	"directories": {
+		"lib": "lib",
+		"test": "test"
+	},
+	"scripts": {
+		"test": "./node_modules/.bin/mocha --reporter spec"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jetrails/gulp-magepack.git"
+	},
+	"keywords": [
+		"magento",
+		"extension",
+		"package",
+		"gulpplugin"
+	],
+	"author": "Rafael Grigorian <development@jetrails.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/jetrails/gulp-magepack/issues"
+	},
+	"homepage": "https://github.com/jetrails/gulp-magepack#readme",
+	"dependencies": {
+		"deasync": "^0.1.13",
+		"glob": "^7.1.2",
+		"gulp-gzip": "^1.4.2",
+		"gulp-tar": "^2.1.0",
+		"md5": "^2.2.1",
+		"moment": "^2.22.2",
+		"plugin-error": "^1.0.1",
+		"through2": "^2.0.3",
+		"vinyl": "^2.1.0",
+		"xml2js": "^0.4.19"
+	},
+	"devDependencies": {
+		"chai": "^4.1.2",
+		"event-stream": "^3.3.4",
+		"gulp": "^4.0.0",
+		"md5-file": "^4.0.0",
+		"mocha": "^5.2.0"
+	}
+}
