@@ -52,6 +52,35 @@ gulp.task ( "package", () => {
 
 An options object will be passed to the plugin as shown in the example above. Below are all passable options:
 
-- **REQUIRED** `version`: `String` that represents your package's version, i.e. `1.0.0`
-- **OPTIONAL** `template`: `String` path to template _package.xml_ file to use as base. This is optional but if it is passed, then it must exist as an absolute or relative path.
-- **OPTIONAL** `output`: `String` path, either relative or absolute, for the outputted _package.xml_ file. If this is not present, then no output file will be generated. And only a virtual _package.xml_ file will be added to the file stream.
+### version:
+
+This parameter represents your package's version and will be used within the _package.xml_ file. It must be of type `string` and is a **required** parameter. An example valid options object containing this parameter can be found below:
+
+```js
+{
+	version: "1.0.0"
+}
+```
+
+### template:
+
+This parameter will define the base _package.xml_ template to use when populating the contents, version, date, and time nodes.  It must be of type `string` and is an **optional** parameter. While this parameter is optional, if it is passed, then the file must be present. An example valid options object containing this parameter can be found below:
+
+```js
+{
+	version: "1.0.0",
+	template: "package.xml"
+}
+```
+
+### output:
+
+If this parameter is present, then the _package.xml_ file that is generated within the stream will also be saved as a file with the specified name. It must be of type `string` and is an **optional** parameter. This parameter can be used alongside the _template_ parameter, this way your template stays up to date. An example valid options object containing this parameter can be found below:
+
+```js
+{
+	version: "1.0.0",
+	template: "package.xml",
+	output: "package.xml"
+}
+```
